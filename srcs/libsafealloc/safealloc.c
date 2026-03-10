@@ -6,7 +6,7 @@
 /*   By: chutterm <chutterm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 20:55:31 by chutterm          #+#    #+#             */
-/*   Updated: 2026/01/07 21:13:04 by chutterm         ###   ########.fr       */
+/*   Updated: 2026/03/11 04:18:49 by chutterm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,15 +89,14 @@ void	*safealloc(size_t count, size_t size, size_t nth_chain)
 
 	if (nth_chain >= MAX_TRACKER_CHAINS)
 	{
-		ft_putendl_fd("Error: nth_chain exceeds max tracker chain limit."\
-, STDERR_FILENO);
+		ft_putendl_fd("Error:\n", STDERR_FILENO);
 		exit(EXIT_FAILURE);
 	}
 	ptr = ft_calloc(count, size);
 	if (!ptr)
 	{
 		free_safealloc();
-		ft_putendl_fd("Error: safealloc failed.", STDERR_FILENO);
+		ft_putendl_fd("Error\n", STDERR_FILENO);
 		exit(EXIT_FAILURE);
 	}
 	track_allocated_ptr(ptr, nth_chain);

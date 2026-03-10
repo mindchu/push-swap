@@ -13,7 +13,14 @@ LIBFT       = $(LIBFT_PATH)/libft.a
 GNL         = $(GNL_PATH)/gnl.a
 
 SRC_NAMES   = main.c \
-              sub/subfile.c \
+              sub/check_input.c \
+			  sub/create_stack.c \
+			  sub/move.c \
+			  sub/sort_big.c \
+			  sub/sort_small.c \
+			  sub/utils_1.c \
+			  sub/utils_2.c \
+			  sub/utils_3.c \
 			  libsafealloc/safealloc.c
             #   parsing/parser.c
 
