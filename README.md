@@ -8,5 +8,8 @@ To compile project. Use __make__
 To execute file, Use __./push_swap__  
 
 ### Resources
-libsafealloc from https://github.com/StrixzIV/libsafealloc.git  
-checklist from https://42-cursus.gitbook.io/guide/2-rank-02/push_swap/building-the-thing  
+https://github.com/StrixzIV/libsafealloc.git  
+https://42-cursus.gitbook.io/guide/2-rank-02/push_swap/building-the-thing 
+https://github.com/waltergcc/42-push_swap
+
+Readme is not finished.

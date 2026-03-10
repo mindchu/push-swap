@@ -2,3 +2,6 @@ build
 checker_Mac
 checker_linux
 push_swap
+libft.a
+gnl.a
+Push-Swap-Tester
