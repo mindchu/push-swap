@@ -6,7 +6,7 @@
 /*   By: chutterm <chutterm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 20:00:25 by chutterm          #+#    #+#             */
-/*   Updated: 2026/03/11 05:22:48 by chutterm         ###   ########.fr       */
+/*   Updated: 2026/03/13 00:35:56 by chutterm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,23 +81,23 @@ static void	ft_ps_lstadd_back(t_stack **stack, t_stack *new)
 	}
 }
 
-t_stack	*create_stack(int ac, char **av)
+t_stack	*create_stack(char **av)
 {
 	t_stack		*stack_a;
 	long int	num;
 	int			index;
 
 	stack_a = NULL;
-	index = 1;
-	while (index < ac)
+	index = 0;
+	while (av[index])
 	{
 		num = ft_atol(av[index]);
 		if (num < INT_MIN || num > INT_MAX)
 		{
 			free_safealloc();
-			put_error();
+			put_error(av);
 		}
-		if (index == 1)
+		if (index == 0)
 			stack_a = ft_ps_lstnew((int)num);
 		else
 			ft_ps_lstadd_back(&stack_a, ft_ps_lstnew((int)num));

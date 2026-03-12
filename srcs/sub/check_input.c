@@ -6,7 +6,7 @@
 /*   By: chutterm <chutterm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 01:36:43 by chutterm          #+#    #+#             */
-/*   Updated: 2026/03/11 04:22:52 by chutterm         ###   ########.fr       */
+/*   Updated: 2026/03/12 22:47:49 by chutterm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	is_repeated(char **arg)
 	int	i;
 	int	j;
 
-	i = 1;
+	i = 0;
 	while (arg[i])
 	{
 		j = i + 1;
@@ -97,7 +97,7 @@ int	check_input(char **arg)
 {
 	int	index;
 
-	index = 1;
+	index = 0;
 	while (arg[index])
 	{
 		if (!is_valid_num(arg[index]))
@@ -106,7 +106,7 @@ int	check_input(char **arg)
 			arg[index] = remove_extra_zero(arg[index]);
 		index++;
 	}
-	if (is_repeated(arg) || !arg[1][0])
+	if (is_repeated(arg))
 		return (0);
 	return (1);
 }

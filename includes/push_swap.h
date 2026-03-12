@@ -6,7 +6,7 @@
 /*   By: chutterm <chutterm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 19:59:09 by chutterm          #+#    #+#             */
-/*   Updated: 2026/03/11 05:21:02 by chutterm         ###   ########.fr       */
+/*   Updated: 2026/03/13 02:30:03 by chutterm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef struct s_stack
 
 int			check_input(char **arg);
 int			get_stack_size(t_stack *st);
-t_stack		*create_stack(int ac, char **av);
+t_stack		*create_stack(char **av);
 void		get_main_index(t_stack *sa, int size);
 int			is_sorted(t_stack *st);
 
@@ -47,7 +47,9 @@ void		calculate_moves(t_stack **sa, t_stack **sb);
 
 int			ft_strcmp(char *s1, char *s2);
 int			absolute(int n);
-void		put_error(void);
-long    	ft_atol(const char *str);
+void		put_error(char **args);
+long		ft_atol(const char *str);
+void		free_matrix(char **matrix);
+char		*join_args(int ac, char **av);
 
 #endif
